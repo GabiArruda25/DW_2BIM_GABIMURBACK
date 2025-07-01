@@ -1,0 +1,30 @@
+id,nome,preco,categoria,foto
+1,Whopper,42.50,Lanche,/img/Whopper.jpg
+2,Big King,40.00,Lanche,/img/BigKing.jpg
+3,Chicken Duplo,37.50,Lanche,/img/ChickenDuplo.jpg
+4,Stacker Duplo Bacon,40.00,Lanche,/img/StackerDuploBacon.jpg
+5,Mega Stacker 2.0,55.00,Lanche,/img/MegaStacker2.0.jpg
+6,Mega Stacker 3.0,65.00,Lanche,/img/MegaStacker3.0.jpg
+7,Whopper Rodeio,52.50,Lanche,/img/WhopperRodeio.jpg
+8,Whopper Duplo,55.00,Lanche,/img/WhopperDuplo.jpg
+9,Whopper Barbecue Bacon,52.50,Lanche,/img/WhopperBarbecueBacon.jpg
+10,Whopper Furioso,52.50,Lanche,/img/WhopperFurioso.jpg
+11,Whopper Vegetariano,42.50,Lanche,/img/WhopperVegetariano.jpg
+12,Batata Média,18.75,Snacks,/img/BatataMedia.jpg
+13,Bk Chicken,19.00,Snacks,/img/BkChicken.jpg
+14,Balde de Batata Frita,33.75,Snacks,/img/BaldedeBatata.jpg
+15,Coca-Cola Lata,5.00,Bebida,/img/cocaNormal.jpeg
+16,Coca-Cola Zero Lata,5.00,Bebida,/img/cocaZero.jpeg
+17,Suco de Laranja,7.00,Bebida,/img/pratsLaranja.jpeg
+18,Suco de Uva,7.00,Bebida,/img/pratsUva.jpeg
+19,Guarana Lata,5.00,Bebida,/img/guaranaNormal.jpeg
+20,Guarana Zero Lata,5.00,Bebida,/img/guaranaZero.jpg
+21,Agua,3.00,Bebida,/img/agua.webp
+22,Balde Ovomantine,15.00,Sorvetes,/img/Balde_ovomaltine.png
+23,Balde Brownie,15.00,Sorvetes,/img/Balde-Brownie.png
+24,Balde de Doce de Leite,15.00,Sorvetes,/img/baldeDeDoceDeLEITE.png
+25,Balde de Diamante Negro,15.00,Sorvetes,/img/baldeSorveteDiamanteNegro.jpg
+26,Casquinha Mista,15.00,Sorvetes,/img/Casquinha_mista.png
+27,Casquinha De Baunilha,15.00,Sorvetes,/img/Casquinha_baunilha.png
+28,teste sorvete,10,Sorvetes,
+29,novo,100,Snacks,a69ce04f-72da-489f-88e6-555c26c59481.jpeg

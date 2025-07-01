@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Autoatendimento</title>
+
+  <!-- Importa o CSS com os estilos da página principal -->
+  <link rel="stylesheet" href="../principal/principal.css" />
+  <style>
+    #top-menu {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+      background-color: #f8f9fa;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    
+    #login-btn {
+      padding: 8px 16px;
+      background-color: #ffcc00;
+      border: none;
+      border-radius: 4px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    
+    #login-btn:hover {
+      background-color: #e6b800;
+      transform: translateY(-2px);
+    }
+    
+    #logout-btn {
+      padding: 8px 16px;
+      background-color: #ff4444;
+      border: none;
+      border-radius: 4px;
+      font-weight: bold;
+      cursor: pointer;
+      margin-left: 10px;
+      display: none;
+      color: white;
+      transition: all 0.3s ease;
+    }
+    
+    #logout-btn:hover {
+      background-color: #e60000;
+      transform: translateY(-2px);
+    }
+    
+    #user-email {
+      margin-left: 10px;
+      font-weight: bold;
+      color: #333;
+      padding: 5px 10px;
+      background-color: #e9ecef;
+      border-radius: 4px;
+      display: none;
+    }
+    
+    #user-info {
+      display: flex;
+      align-items: center;
+    }
+    
+    .user-icon {
+      margin-right: 5px;
+      color: #007bff;
+    }
+  </style>
+</head>
+
+<body>
+<div id="top-menu">
+    <div id="menu-buttons">
+        <!-- seus botões de Lanches, Snacks, etc. já devem estar aqui -->
+    </div>
+    <div style="display: flex; align-items: center;">
+        <button id="login-btn" onclick="window.location.href='../login/login.html'">
+            Login
+        </button>
+        <div id="user-info" style="display: none;">
+            <span class="user-icon">👤</span>
+            <span id="user-email"></span>
+            <button id="logout-btn" onclick="logout()">
+                Logout
+            </button>
+        </div>
+    </div>
+</div>
+  <!-- Conteúdo principal da aplicação -->
+   <!-- tag <main> representa o conteúdo principal da página, sendo uma área central que contém o conteúdo mais importante da página.-->
+  <main class="container">
+
+    <!-- Seção com os botões de categorias (lanches e snacks) -->
+    <nav class="categorias">
+      <!-- Ao clicar, exibe os produtos da categoria escolhida -->
+      <button onclick="mostrarCategoria('lanches')">Lanches</button>
+      <button onclick="mostrarCategoria('snacks')">Snacks</button>
+      <button onclick="mostrarCategoria('bebidas')">Bebidas</button>
+      <button onclick="mostrarCategoria('sorvetes')">Sorvetes</button>
+      <!-- A tag <nav> define uma seção de navegação na página. Ela é usada para agrupar links ou botões que permitem aos usuários navegar entre diferentes seções da página. -->
+    </nav>
+
+    <!-- Área onde os produtos da categoria selecionada serão exibidos -->
+     <!--A tag <section> é usada para agrupar conteúdo relacionado em uma seção distinta da página.-->
+    <section class="produtos" id="produtos-container">
+      <!-- Os quadrados com os produtos (imagem, nome, preço, quantidade) serão adicionados dinamicamente aqui pelo JavaScript -->
+    </section>
+
+    <!-- Área lateral do carrinho de compras -->
+     <!--A tag <aside> é usada para representar conteúdo relacionado, mas não essencial para o conteúdo principal. Neste caso, é a área lateral do carrinho de compras-->
+    <aside class="carrinho" id="carrinho">
+      <h2>Carrinho</h2>
+
+      <!-- Aqui serão exibidos os itens adicionados ao carrinho -->
+      <div id="itensCarrinho"></div>
+
+      <!-- Lista detalhada dos produtos no carrinho -->
+      <div id="lista-carrinho"></div>
+
+      <!-- Rodapé do carrinho com total e botão para avançar -->
+       <!--A tag <footer> define o rodapé da página ou de uma seção específica. Neste caso, ele contém o total da compra e o botão para avançar para a próxima etapa-->
+      <footer class="footer">
+        <!-- Exibe o valor total da compra -->
+        <strong>Total: R$ <span id="total">0.00</span></strong>
+
+        <!-- Botão que leva para a tela de cupom -->
+        <button id="btn-proximo" onclick="irParaCupom()">Próximo</button>
+      </footer>
+    </aside>
+
+  </main>
+
+  <!-- Importa o JavaScript que controla a lógica da página -->
+  <script src="../principal/principal.js"></script>
+
+</body>
+
+</html>
+

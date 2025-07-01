@@ -1,0 +1,239 @@
+/* CSS moderno e padronizado para a página de cupom */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Botão de voltar no canto superior direito */
+.btn-voltar {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 600;
+    z-index: 1000;
+    transition: all 0.3s ease;
+    font-size: 14px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.btn-voltar:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+}
+
+.cupom-container {
+    width: 100%;
+    max-width: 600px;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    text-align: center;
+    animation: slideIn 0.5s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.titulo {
+    font-size: 42px;
+    font-weight: 700;
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 30px;
+}
+
+.search-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.search-area input {
+    padding: 15px 20px;
+    flex: 1;
+    min-width: 250px;
+    font-size: 16px;
+    border-radius: 15px;
+    border: 2px solid #e1e5e9;
+    transition: all 0.3s ease;
+    background: white;
+}
+
+.search-area input:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+    transform: translateY(-2px);
+}
+
+.search-area input::placeholder {
+    color: #999;
+}
+
+.search-area button {
+    font-size: 16px;
+    font-weight: 600;
+    padding: 15px 25px;
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    color: white;
+    transition: all 0.3s ease;
+    min-width: 120px;
+}
+
+.search-area button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+}
+
+.mensagem {
+    font-size: 18px;
+    font-weight: 600;
+    color: #28a745;
+    margin: 20px 0;
+    padding: 15px;
+    background: rgba(40, 167, 69, 0.1);
+    border-radius: 10px;
+    border-left: 4px solid #28a745;
+}
+
+.mensagem.erro {
+    color: #dc3545;
+    background: rgba(220, 53, 69, 0.1);
+    border-left-color: #dc3545;
+}
+
+.botoes {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.voltar, .pagar {
+    padding: 15px 30px;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    color: white;
+    transition: all 0.3s ease;
+    flex: 1;
+    min-width: 150px;
+}
+
+.voltar {
+    background: linear-gradient(45deg, #6c757d, #495057);
+}
+
+.voltar:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(108, 117, 125, 0.4);
+}
+
+.pagar {
+    background: linear-gradient(45deg, #28a745, #20c997);
+}
+
+.pagar:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(40, 167, 69, 0.4);
+}
+
+/* Seção de resumo do pedido */
+.resumo-pedido {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    margin: 30px 0;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    text-align: left;
+}
+
+.resumo-pedido h3 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.item-resumo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #e1e5e9;
+}
+
+.item-resumo:last-child {
+    border-bottom: none;
+    font-weight: 700;
+    font-size: 18px;
+    color: #667eea;
+    margin-top: 10px;
+    padding-top: 15px;
+    border-top: 2px solid #e1e5e9;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .cupom-container {
+        padding: 30px 20px;
+        margin: 10px;
+    }
+    
+    .titulo {
+        font-size: 32px;
+    }
+    
+    .search-area {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .search-area input {
+        min-width: auto;
+        margin-bottom: 15px;
+    }
+    
+    .botoes {
+        flex-direction: column;
+    }
+    
+    .voltar, .pagar {
+        margin-bottom: 10px;
+    }
+}
+

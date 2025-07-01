@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Pagamento</title>
+
+  <!-- Importa o arquivo CSS que estiliza esta página -->
+  <link rel="stylesheet" href="../pagamento/pagamento.css">
+
+  <!-- Importa a biblioteca QRCode.js para gerar QR Codes via JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+</head>
+
+<body>
+
+  <!-- Conteúdo principal da página -->
+  <main class="container">
+
+    <!-- Cabeçalho da seção de pagamento -->
+    <header>
+      <h1>Escolha a forma de pagamento</h1>
+    </header>
+
+    <!-- Seção de escolha do tipo de pagamento -->
+    <section class="pagamento-opcoes">
+      <button onclick="selecionarPagamento('pix')">PIX</button>
+      <button onclick="selecionarPagamento('cartao')">Cartão</button>
+    </section>
+
+    <!-- Parágrafo dinâmico para valor total (pode ser atualizado pelo JS) -->
+    <p id="valorTotal"></p>
+
+    <!-- Seção com o valor total destacado -->
+    <section class="valor-total">
+      Valor Total: <strong id="valorFinal">R$ 0,00</strong>
+    </section>
+
+    <!-- Área de pagamento via PIX, escondida inicialmente -->
+    <section id="pix-area" class="pix-area" style="display: none;">
+      <h2>Escaneie o QR Code para pagar via PIX</h2>
+
+      <!-- QR Code gerado em tempo real -->
+      <canvas id="qrcode"></canvas>
+
+      <!-- Informações do recebedor -->
+      <p>Nome: <strong>Gabriela Murback</strong></p>
+      <p>CPF: <strong>138.858.979-62</strong></p>
+    </section>
+
+    <!-- Área de pagamento via Cartão, escondida inicialmente -->
+    <section id="cartao-area" class="cartao-area" style="display: none;">
+      <h2>Dados do Cartão</h2>
+      <form id="form-cartao">
+        <label for="numero-cartao">Número do Cartão:</label>
+        <input type="text" id="numero-cartao" placeholder="XXXX XXXX XXXX XXXX" maxlength="19" required>
+
+        <label for="nome-cartao">Nome no Cartão:</label>
+        <input type="text" id="nome-cartao" required>
+
+        <label for="validade-cartao">Validade (MM/AA):</label>
+        <input type="text" id="validade-cartao" placeholder="MM/AA" maxlength="5" required>
+
+        <label for="cvv-cartao">CVV:</label>
+        <input type="text" id="cvv-cartao" placeholder="XXX" maxlength="4" required>
+
+        <button type="submit">Pagar com Cartão</button>
+      </form>
+    </section>
+
+    <!-- Rodapé local com o botão de voltar -->
+    <footer class="botao-voltar">
+      <button id="voltar-cupom">Voltar para o Cupom</button>
+    </footer>
+
+  </main>
+
+  <!-- Script JavaScript que controla o comportamento da página -->
+  <script src="../pagamento/pagamento.js"></script>
+
+</body>
+
+</html>
+

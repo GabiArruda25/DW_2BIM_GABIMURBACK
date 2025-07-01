@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Cupom</title>
+  <link rel="stylesheet" href="../cupom/cupom.css">
+</head>
+
+<body>
+
+  <!-- Área principal da página -->
+  <main class="cupom-container">
+
+    <!-- Cabeçalho com o título da página -->
+    <header>
+      <h1 class="titulo">CUPOM</h1>
+    </header>
+
+    <!-- Seção da área de busca de cupons -->
+    <section class="search-area">
+      <input type="text" id="inputCupom" placeholder="Digite seu cupom...">
+      <button onclick="verificarCupom()">🔍</button>
+    </section>
+
+    <!-- Seção para mensagens ao usuário -->
+    <section id="mensagem" class="mensagem"></section>
+
+    <!-- Rodapé com os botões de navegação -->
+    <footer class="botoes">
+      <button class="voltar" onclick="voltar()">Voltar</button>
+      <button class="pagar" onclick="pagar()">pagar</button>
+    </footer>
+
+  </main>
+
+  <script src="../cupom/cupom.js"></script>
+
+</body>
+</html>

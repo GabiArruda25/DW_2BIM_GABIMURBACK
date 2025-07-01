@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Gerenciamento</title>
+  <link rel="stylesheet" href="gerente.css">
+</head>
+
+<body>
+  <button class="btn-voltar" onclick="window.location.href='../principal/principal.html'">← Voltar para Início</button>
+
+  <div class="container">
+    <div class="nav-tabs">
+      <div class="nav-tab active" onclick="showTabComplete('produtos')">📦 Produtos</div>
+      <div class="nav-tab" onclick="showTabComplete('usuarios')">👥 Usuários</div>
+      <div class="nav-tab" onclick="showTabComplete('cupons')">🎫 Cupons</div>
+    </div>
+
+  <!-- Produtos -->
+  <div id="produtos" class="tab-content active">
+    <h2>Produtos</h2>
+    <form id="form-produto">
+      <input type="text" name="nome" placeholder="Nome" required />
+      <select name="categoria" required>
+        <option value="">Selecione uma categoria</option>
+        <option value="Lanche">Lanche</option>
+        <option value="Snacks">Snacks</option>
+        <option value="Bebida">Bebida</option>
+        <option value="Sorvetes">Sorvetes</option>
+      </select>
+      <input type="number" name="preco" placeholder="Preço" step="0.01" required />
+      <input type="file" id="foto" name="imagem" accept="image/*" required />
+      <button type="submit">Cadastrar</button>
+    </form>
+    <p>Total: <span id="total-produtos">0</span> produtos | <span id="total-categorias">0</span> categorias</p>
+    <table id="tabela-produtos">
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Categoria</th>
+          <th>Preço</th>
+          <th>Imagem</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <!-- Usuários -->
+  <div id="usuarios" class="tab-content">
+    <h2>Usuários</h2>
+    <input type="email" id="email-usuario" placeholder="Email do usuário" />
+    <button id="promover-btn">Promover a gerente</button>
+    <button id="excluir-usuario-btn">Excluir usuário</button>
+    <p>Total: <span id="total-usuarios">0</span> usuários | <span id="total-gerentes">0</span> gerentes</p>
+    <table id="tabela-usuarios">
+      <thead>
+        <tr>
+          <th>Email</th>
+          <th>Tipo</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <!-- Cupons -->
+  <div id="cupons" class="tab-content">
+    <h2>Cupons</h2>
+    <input type="text" id="codigo-cupom" placeholder="Código" />
+    <input type="number" id="percentual-cupom" placeholder="Percentual (%)" />
+    <button id="adicionar-cupom-btn">Adicionar cupom</button>
+    <p>Total: <span id="total-cupons">0</span> cupons</p>
+    <table id="tabela-cupons">
+      <thead>
+        <tr>
+          <th>Código</th>
+          <th>Percentual</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <script src="gerente.js"></script>
+</body>
+</html>

@@ -1,0 +1,327 @@
+/* Estilo geral para o corpo da página */
+body {
+  margin: 0; 
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+}
+
+/* Menu superior */
+#top-menu {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+  padding: 15px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+#top-menu button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 14px;
+}
+
+#login-btn {
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  color: white;
+}
+
+#login-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+#logout-btn {
+  background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+  color: white;
+}
+
+#logout-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);
+}
+
+#user-email {
+  color: #333;
+  font-weight: 600;
+}
+
+/* Container principal que divide a tela em três colunas */
+.container {
+  display: flex;
+  min-height: calc(100vh - 70px);
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px;
+  gap: 20px;
+}
+
+/* Coluna lateral esquerda: seção de categorias */
+.categorias {
+  width: 250px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: stretch;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  height: fit-content;
+}
+
+/* Botões da seção de categorias */
+.categorias button {
+  padding: 15px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  color: white;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.categorias button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+}
+
+.categorias button:active {
+  transform: translateY(-1px);
+}
+
+/* Área do meio: produtos */
+.produtos {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 25px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  overflow-y: auto;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  max-height: calc(100vh - 140px);
+}
+
+/* Estilo de cada card de produto */
+.produto, .card-produto {
+  background: white;
+  border-radius: 15px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+.produto:hover, .card-produto:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+/* Imagem do produto */
+.produto img, .card-produto img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.produto h3, .card-produto h3 {
+  margin: 10px 0;
+  color: #333;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.produto p, .card-produto p {
+  color: #667eea;
+  font-weight: 700;
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+/* Área de controle de quantidade */
+.quantidade {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+/* Botões de adicionar/remover quantidade */
+.quantidade button {
+  width: 35px;
+  height: 35px;
+  font-size: 18px;
+  font-weight: bold;
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  border: none;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quantidade button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.quantidade span {
+  font-weight: 600;
+  font-size: 16px;
+  color: #333;
+  min-width: 20px;
+}
+
+/* Coluna da direita: carrinho de compras */
+.carrinho {
+  width: 300px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  height: fit-content;
+  max-height: calc(100vh - 140px);
+}
+
+/* Título do carrinho centralizado */
+.carrinho h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+#lista-carrinho {
+  flex: 1;
+  overflow-y: auto;
+  margin-bottom: 20px;
+}
+
+/* Rodapé do carrinho com o total e botão "Próximo" */
+.footer {
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  border-top: 2px solid #f0f0f0;
+  margin-top: auto;
+}
+
+/* Texto do total em destaque */
+.footer strong {
+  font-size: 20px;
+  color: #333;
+  text-align: center;
+}
+
+#total {
+  color: #667eea;
+  font-weight: 700;
+}
+
+/* Botão "Próximo" estilizado */
+#btn-proximo {
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  color: white;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 15px 25px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+#btn-proximo:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+}
+
+#btn-proximo:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Estilo para cada item dentro do carrinho */
+.item-carrinho {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  background: #f8f9ff;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  font-size: 14px;
+  border-left: 4px solid #667eea;
+}
+
+.item-carrinho span:first-child {
+  font-weight: 600;
+  color: #333;
+}
+
+.item-carrinho span:last-child {
+  color: #667eea;
+  font-weight: 700;
+}
+
+/* Responsividade */
+@media (max-width: 1200px) {
+  .container {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .categorias, .carrinho {
+    width: 100%;
+  }
+  
+  .produtos {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .produtos {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;
+  }
+  
+  .categorias {
+    flex-direction: row;
+    overflow-x: auto;
+    padding: 15px;
+  }
+  
+  .categorias button {
+    min-width: 120px;
+  }
+}
+
